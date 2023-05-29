@@ -56,19 +56,19 @@
 		</div>
 	
 		<!-- Add some margin-left to this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page) -->
-		<div id="main" class:pushMainToRight={navOpen}>
+		<!-- <div id="main" class:pushMainToRight={navOpen}>
 			<h2>Sidenav Push Example</h2>
 		<p>This content will slide to the left if you add the class pushMain when navOpen evaluates to true in the parent DIV.</p>
-		</div>
+		</div> -->
 	
 	<!-- Use keyboard to handle the sidenav -->
-	<svelte:window on:keydown={handleNavWithKey} />
+	<!-- <svelte:window on:keydown={handleNavWithKey} /> -->
 	
 	<style>
 	/* Hamburger Menu icon */	
 	.container {
 		position: absolute;
-		right: 10%;
+		left : 10%;
 	  display: inline-block;
 	  cursor: pointer;
 	}
@@ -103,14 +103,16 @@
 	/* The side navigation menu */
 	.sidenav {
 	  height: 100%; 
-	  width: 0; /* 0 width - change this with JavaScript */
+	  width: 0%; /* 0 width - change this with JavaScript */
 	  position: fixed;
 	  z-index: 1;
 	  top: 0;
 	  left: 0;
-	  background-color: #111; 
+	  /* right:0; */
+	  background-color:black; 
 	  overflow-x: hidden; /* Disable horizontal scroll */
 	  padding-top: 60px;
+	  right:-50px;
 	  transition: 0.5s;
 	}
 	
